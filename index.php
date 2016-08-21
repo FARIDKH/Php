@@ -42,22 +42,25 @@ and open the template in the editor.
                                 </tr>
                             </thead>
                             <tbody>
-<!--
-                                <tr>
-                                    <td>Yolchu Nasib</td>
-                                    <td>Quba</td>
-                                    <td>
-                                        <img width="128" src="uploads/photo.jpg" class="img-responsive">
-                                    </td>
-                                </tr>
--->
+
            
                                <?php
                                 
+                                    session_start();
+
+                                        { ?>
+                                                    
+                                            <tr>
+                                                <td><?= $_SESSION['name'] ?></td>
+                                                <td><?= $_SESSION['place']  ?></td>
+                                                <td><img src="<?= $_SESSION['img'] ?>"</td>
+                                            </tr>                                                    
+                                                    
+                                                    
+                                    <?php    } ?>
+    
                                 
                                 
-                                
-                                ?>
             
                             </tbody>
                         </table>
